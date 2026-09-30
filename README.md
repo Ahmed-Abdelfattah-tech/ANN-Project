@@ -22,7 +22,7 @@ This project was created as a practical application of the ANN fundamentals lear
 
 ## Dataset
 
-The project uses the built-in **Wine dataset** provided by `sklearn.datasets.load\\\\\\\_wine`.
+The project uses the built-in **Wine dataset** provided by `sklearn.datasets.load\_wine`.
 
 ### Dataset Shape
 
@@ -84,7 +84,7 @@ The data is divided into three subsets:
 The split uses:
 
 ```python
-random\\\\\\\_state=42
+random\_state=42
 ```
 
 The validation set is used during training to monitor model performance, while the test set is kept for final evaluation.
@@ -98,14 +98,14 @@ Because Artificial Neural Networks are sensitive to feature scale, `StandardScal
 The scaler is fitted **only on the training data**:
 
 ```python
-scaler.fit\\\\\\\_transform(X\\\\\\\_train)
+scaler.fit\_transform(X\_train)
 ```
 
 The validation and test sets are transformed using the same fitted scaler:
 
 ```python
-scaler.transform(X\\\\\\\_val)
-scaler.transform(X\\\\\\\_test)
+scaler.transform(X\_val)
+scaler.transform(X\_test)
 ```
 
 This keeps the preprocessing consistent and avoids using validation/test information when fitting the scaler.
@@ -186,9 +186,9 @@ The test set contained 36 samples, and all 36 were classified correctly.
 ### Confusion Matrix
 
 ```text
-\\\\\\\[\\\\\\\[14  0  0]
- \\\\\\\[ 0 14  0]
- \\\\\\\[ 0  0  8]]
+\[\[14  0  0]
+ \[ 0 14  0]
+ \[ 0  0  8]]
 ```
 
 Every test sample was classified correctly.
@@ -260,7 +260,7 @@ This project was built to put the following concepts into practice:
 
 ```text
 ANN-Wine-Classification/
-├── ANN\\\\\\\_Project.ipynb
+├── ANN\_Project.ipynb
 ├── README.md
 └── requirements.txt
 ```
@@ -278,7 +278,7 @@ pip install -r requirements.txt
 ### 2\. Open the notebook
 
 ```text
-ANN\\\\\\\_Project.ipynb
+ANN\_Project.ipynb
 ```
 
 ### 3\. Run the cells sequentially
