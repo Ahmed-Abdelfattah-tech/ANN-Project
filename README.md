@@ -10,7 +10,7 @@ Rather than focusing on advanced Deep Learning techniques, this project demonstr
 
 **Data Preparation → EDA → Train/Validation/Test Split → Feature Scaling → ANN Architecture → Training → Early Stopping → Evaluation → Learning Curves**
 
-\---
+---
 
 ## Objective
 
@@ -18,11 +18,11 @@ The objective is to build an Artificial Neural Network that can classify wine sa
 
 This project was created as a practical application of the ANN fundamentals learned during my Deep Learning studies.
 
-\---
+---
 
 ## Dataset
 
-The project uses the built-in **Wine dataset** provided by `sklearn.datasets.load\_wine`.
+The project uses the built-in **Wine dataset** provided by `sklearn.datasets.load_wine`.
 
 ### Dataset Shape
 
@@ -55,7 +55,7 @@ The input features describe different chemical properties of the wine, including
 * OD280/OD315 of diluted wines
 * Proline
 
-\---
+---
 
 ## Exploratory Data Analysis
 
@@ -69,7 +69,7 @@ The notebook performs basic EDA before model development:
 
 The dataset contains **no missing values**.
 
-\---
+---
 
 ## Data Splitting
 
@@ -84,12 +84,12 @@ The data is divided into three subsets:
 The split uses:
 
 ```python
-random\_state=42
+random_state=42
 ```
 
 The validation set is used during training to monitor model performance, while the test set is kept for final evaluation.
 
-\---
+---
 
 ## Feature Scaling
 
@@ -98,19 +98,19 @@ Because Artificial Neural Networks are sensitive to feature scale, `StandardScal
 The scaler is fitted **only on the training data**:
 
 ```python
-scaler.fit\_transform(X\_train)
+scaler.fit_transform(X_train)
 ```
 
 The validation and test sets are transformed using the same fitted scaler:
 
 ```python
-scaler.transform(X\_val)
-scaler.transform(X\_test)
+scaler.transform(X_val)
+scaler.transform(X_test)
 ```
 
 This keeps the preprocessing consistent and avoids using validation/test information when fitting the scaler.
 
-\---
+---
 
 ## ANN Architecture
 
@@ -144,7 +144,7 @@ Dense(3, Softmax)
 
 The **Softmax** output layer produces probabilities for the three wine classes.
 
-\---
+---
 
 ## Training
 
@@ -162,7 +162,7 @@ Early stopping monitors validation loss and restores the model weights from the 
 
 The best weights were restored from **epoch 24**.
 
-\---
+---
 
 ## Results
 
@@ -186,26 +186,26 @@ The test set contained 36 samples, and all 36 were classified correctly.
 ### Confusion Matrix
 
 ```text
-\[\[14  0  0]
- \[ 0 14  0]
- \[ 0  0  8]]
+[[14  0  0]
+ [ 0 14  0]
+ [ 0  0  8]]
 ```
 
 Every test sample was classified correctly.
 
 > Because this is a relatively small built-in dataset, the 100% test accuracy should be interpreted in the context of the dataset size and split rather than as evidence that the same performance would generalize to every unseen dataset.
 
-\---
+---
 
 ## Learning Curves
 
-### Training \& Validation Accuracy
+### Training & Validation Accuracy
 
-!\[Training and Validation Accuracy](accuracy\_curve.png)
+![Training and Validation Accuracy](accuracy_curve.png)
 
-### Training \& Validation Loss
+### Training & Validation Loss
 
-!\[Training and Validation Loss](loss\_curve.png)
+![Training and Validation Loss](loss_curve.png)
 
 
 
@@ -216,7 +216,7 @@ The notebook visualizes:
 
 These plots help monitor learning behavior and identify potential overfitting during training.
 
-\---
+---
 
 ## Key Deep Learning Concepts Applied
 
@@ -240,7 +240,7 @@ This project was built to put the following concepts into practice:
 * Classification Report
 * Training and Validation Curves
 
-\---
+---
 
 ## Technologies
 
@@ -254,38 +254,38 @@ This project was built to put the following concepts into practice:
 * Keras
 * Jupyter Notebook
 
-\---
+---
 
 ## Project Structure
 
 ```text
 ANN-Project/
-├── ANN\_Project.ipynb
+├── ANN_Project.ipynb
 ├── README.md
 └── requirements.txt
 ```
 
-\---
+---
 
 ## How to Run
 
-### 1\. Install the dependencies
+### 1. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2\. Open the notebook
+### 2. Open the notebook
 
 ```text
-ANN\_Project.ipynb
+ANN_Project.ipynb
 ```
 
-### 3\. Run the cells sequentially
+### 3. Run the cells sequentially
 
 The dataset is loaded directly from Scikit-learn, so no external dataset files are required.
 
-\---
+---
 
 ## What I Learned From This Project
 
@@ -295,7 +295,7 @@ It helped me move from understanding ANN concepts theoretically to actually buil
 
 The main goal was not to build a highly complex model, but to **apply what I learned through a complete end-to-end example**.
 
-\---
+---
 
 ## Author
 
