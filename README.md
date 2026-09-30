@@ -259,7 +259,7 @@ This project was built to put the following concepts into practice:
 ## Project Structure
 
 ```text
-ANN-Wine-Classification/
+ANN-Project/
 ├── ANN\_Project.ipynb
 ├── README.md
 └── requirements.txt
